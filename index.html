@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Carbon Footprint Calculator</h1>
+    <form id="carbon-form">
+      <label for="car-km"> Car travel (km per week):</label>
+      <input type="number" id="car-km" name="car-km" min="0">
+
+      <label for="flights"> Flights per year:</label>
+      <input type="number" id="flights" name="flights" min="0">
+
+      <label for="public-transport"> Public transport (km per week):</label>
+      <input type="number" id="public-transport" name="public-transport" min="0">
+
+      <label for="electricity"> Electricity use (kWh per month):</label>
+      <input type="number" id="electricity" name="electricity" min="0">
+
+      <label for="gas"> Gas consumption (m³ per month):</label>
+      <input type="number" id="gas" name="gas" min="0">
+
+      <label for="meat-meals"> Meat meals per week:</label>
+      <input type="number" id="meat-meals" name="meat-meals" min="0">
+
+      <label for="veg-meals"> Vegetarian meals per week:</label>
+      <input type="number" id="veg-meals" name="veg-meals" min="0">
+
+      <label for="vegan-meals"> Vegan meals per week:</label>
+      <input type="number" id="vegan-meals" name="vegan-meals" min="0">
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>Your Results</h2>
+      <p id="total"></p>
+      <div id="breakdown"></div>
+      <canvas id="emissionsChart" width="400" height="400"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
